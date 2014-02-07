@@ -46,7 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BeginningTestscript.cs" />
      <Compile Include="Assets\CameraControl.cs" />
+     <Compile Include="Assets\XmlLoader.cs" />
+     <None Include="Assets\Xml Files\gamexmldata.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

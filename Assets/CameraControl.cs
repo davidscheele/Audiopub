@@ -13,7 +13,7 @@ public class CameraControl : MonoBehaviour
 
 	
 		private bool moving = false;
-	private bool moveDirectionRight = true; //true if we move right, false if we move left
+		private bool moveDirectionRight = true; //true if we move right, false if we move left
 
 		// Use this for initialization
 		void Start ()
@@ -61,40 +61,30 @@ public class CameraControl : MonoBehaviour
 				}
 		}
 
-	void SlideMotion (bool _moveDirectionRight)
+		void SlideMotion (bool _moveDirectionRight)
 		{
 
 				moving = true;
-		moveDirectionRight = _moveDirectionRight;
+				moveDirectionRight = _moveDirectionRight;
 		}
 
 		void SlideMotion ()
 		{
 				Vector3 tempVector = transform.position;
-		if (moveDirectionRight) {
-			if(tempVector.x + movementQuickness <= end)						//checks if we haven't yet reached the right end
-						tempVector.x = tempVector.x + movementQuickness;
+				if (moveDirectionRight) {
+						if (tempVector.x + movementQuickness <= end)						//checks if we haven't yet reached the right end
+								tempVector.x = tempVector.x + movementQuickness;
 				} else {
-			if(tempVector.x - movementQuickness >= start)					//checks if we haven't yet reached the left end
-						tempVector.x = tempVector.x - movementQuickness;
+						if (tempVector.x - movementQuickness >= start)					//checks if we haven't yet reached the left end
+								tempVector.x = tempVector.x - movementQuickness;
 				}
 
-		transform.position = tempVector;
-		if (transform.position.x % iconSpacing == 0) { //stop at spacing values
-			moving = false;
-		}
+				transform.position = tempVector;
+				if (transform.position.x % iconSpacing == 0) { //stop at spacing values
+						moving = false;
+				}
 
 		}
 
 
 }
-//	if ((tempVector.x + (movementQuickness * moveDirectionSign)) > end ) { //if camera would move out of bounds, stop.
-//		//do nothing
-//	} else {
-//		tempVector.x = tempVector.x + (movementQuickness * moveDirectionSign);
-//		transform.position = tempVector;
-//		if (transform.position.x % 5 == 0) {
-//			moving = false;
-//		}
-//	}
-//}

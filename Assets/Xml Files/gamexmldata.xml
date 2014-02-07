@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menuitems>
+	<menuitem>
+	<name>The Best Game!</name>
+	<iconname>bestgameicon.png</iconname>
+	<ambientsoundname>bestgameambient.ogg</ambientsoundname>
+	<selectsoundname>bestgameselect.ogg</selectsoundname>
+	<voiceovername>bestgamevoice.ogg</voiceovername>
+	<subxml>bestgame.xml</subxml>
+	</menuitem>
+	
+	<menuitem>
+	<name>The Second Best Game!</name>
+	<iconname>secondbestgameicon.png</iconname>
+	<ambientsoundname>secondbestgameambient.ogg</ambientsoundname>
+	<selectsoundname>secondbestgameselect.ogg</selectsoundname>
+	<voiceovername>secondbestgamevoiceover.ogg</voiceovername>
+	<subxml>secondbestgame.xml</subxml>
+	</menuitem>
+	
+	<menuitem>
+	<name>Last Game!</name>
+	<iconname>lastgameicon.png</iconname>
+	<ambientsoundname>lastgameambient.ogg</ambientsoundname>
+	<selectsoundname>lastgameselect.ogg</selectsoundname>
+	<voiceovername>lastgamevoiceover.ogg</voiceovername>
+	<subxml>lastgame.xml</subxml>
+	</menuitem>
+</menuitems>
+<!--
+
+	<menuitem>
+	<name></name>
+	<iconname></iconname>
+	<ambientsoundname></ambientsoundname>
+	<selectsoundname></selectsoundname>
+	<voiceovername></voiceovername>
+	<subxml></subxml>
+	</menuitem>
+	
+	-->
+	
