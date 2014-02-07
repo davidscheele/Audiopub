@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CameraControl.cs">
+    <Files>
+      <File FileName="..\Soundstage\Assets\TestSoundScript.cs" Line="30" Column="24" />
+      <File FileName="..\Soundstage\Assets\Selecter.cs" Line="1" Column="1" />
+      <File FileName="..\Soundstage\Assets\Cubecontrollerscript.cs" Line="1" Column="1" />
+      <File FileName="..\rollerballtemp\Assets\Scripts\PlayerControl.cs" Line="1" Column="1" />
+      <File FileName="..\Roomdemo\Assets\Scripts\PlayerControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\CameraControl.cs" Line="87" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
