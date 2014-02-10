@@ -2,28 +2,28 @@
 <menuitems>
 	<menuitem>
 	<name>The Best Game!</name>
-	<iconname>bestgameicon.png</iconname>
-	<ambientsoundname>bestgameambient.ogg</ambientsoundname>
-	<selectsoundname>bestgameselect.ogg</selectsoundname>
-	<voiceovername>bestgamevoice.ogg</voiceovername>
+	<iconname>bestgameicon</iconname>
+	<ambientsoundname>bestgameambient</ambientsoundname>
+	<selectsoundname>bestgameselect</selectsoundname>
+	<voiceovername>bestgamevoice</voiceovername>
 	<subxml>bestgame.xml</subxml>
 	</menuitem>
 	
 	<menuitem>
 	<name>The Second Best Game!</name>
-	<iconname>secondbestgameicon.png</iconname>
-	<ambientsoundname>secondbestgameambient.ogg</ambientsoundname>
-	<selectsoundname>secondbestgameselect.ogg</selectsoundname>
-	<voiceovername>secondbestgamevoiceover.ogg</voiceovername>
+	<iconname>secondbestgameicon</iconname>
+	<ambientsoundname>secondbestgameambient</ambientsoundname>
+	<selectsoundname>secondbestgameselect</selectsoundname>
+	<voiceovername>secondbestgamevoiceover</voiceovername>
 	<subxml>secondbestgame.xml</subxml>
 	</menuitem>
 	
 	<menuitem>
 	<name>Last Game!</name>
-	<iconname>lastgameicon.png</iconname>
-	<ambientsoundname>lastgameambient.ogg</ambientsoundname>
-	<selectsoundname>lastgameselect.ogg</selectsoundname>
-	<voiceovername>lastgamevoiceover.ogg</voiceovername>
+	<iconname>lastgameicon</iconname>
+	<ambientsoundname>lastgameambient</ambientsoundname>
+	<selectsoundname>lastgameselect</selectsoundname>
+	<voiceovername>lastgamevoiceover</voiceovername>
 	<subxml>lastgame.xml</subxml>
 	</menuitem>
 </menuitems>

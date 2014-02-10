@@ -10,7 +10,8 @@ public class XmlLoader : MonoBehaviour
 //		public TextAsset MainMenuXmlName;
 		public string MainMenuXmlName;
 		public GUIText debugText;
-
+		public Texture debugTexture;
+		private MenuCreator menuCreator = new MenuCreator ();
 		private List<Dictionary<string,string>> menuItemsList = new List<Dictionary<string,string>> ();
 		private Dictionary<string, string> menuItem;
 
@@ -19,9 +20,7 @@ public class XmlLoader : MonoBehaviour
 		{
 	
 				ReadMainMenuXml ();
-				string stringout = "";
-				menuItemsList [0].TryGetValue ("name", out stringout);
-				debugText.text = stringout;
+				menuCreator.createMenu (menuItemsList);
 		}
 	
 		// Update is called once per frame
