@@ -53,7 +53,9 @@
      <Compile Include="Assets\Scripts\CameraControl.cs" />
      <Compile Include="Assets\Scripts\ConstantsManager.cs" />
      <Compile Include="Assets\Scripts\MenuCreator.cs" />
+     <Compile Include="Assets\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\XmlLoader.cs" />
+     <Compile Include="Assets\SelectionManager.cs" />
      <Compile Include="Assets\TestBehaviour.cs" />
      <None Include="Assets\Xml Files\gamexmldata.xml" />
   </ItemGroup>

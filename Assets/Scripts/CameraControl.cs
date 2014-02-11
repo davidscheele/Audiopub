@@ -36,6 +36,7 @@ public class CameraControl : MonoBehaviour
 						//Moves Camera Right
 						if (Input.GetKeyDown (KeyCode.RightArrow)) {
 								SlideMotion (true);
+								
 			
 						}
 

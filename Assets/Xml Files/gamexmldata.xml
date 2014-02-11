@@ -21,7 +21,7 @@
 	<menuitem>
 	<name>Last Game!</name>
 	<iconname>lastgameicon</iconname>
-	<ambientsoundname>lastgameambient</ambientsoundname>
+	<ambientsoundname>last.game.ambient</ambientsoundname>
 	<selectsoundname>lastgameselect</selectsoundname>
 	<voiceovername>lastgamevoiceover</voiceovername>
 	<subxml>lastgame.xml</subxml>
