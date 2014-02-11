@@ -7,6 +7,7 @@ public class CameraControl : MonoBehaviour
 		public float movementQuickness = 1; //Move camera how fast
 		public ConstantsManager constantsManager; //Test
 		public Camera mainCamera;
+		public SelectionManager selectionManager;
 
 		private float start = 0f; //leftmost icon end
 		private float end = 0f; //rightmost icon end
@@ -84,6 +85,12 @@ public class CameraControl : MonoBehaviour
 				mainCamera.transform.position = tempVector;
 				if (mainCamera.transform.position.x % iconSpacing == 0) { //stop at spacing values
 						moving = false;
+						if (moveDirectionRight) {
+								selectionManager.moveRight ();
+						} else {
+								selectionManager.moveLeft ();
+						}
+						
 				}
 
 		}

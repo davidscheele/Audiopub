@@ -6,9 +6,11 @@ public class MenuCreator : MonoBehaviour
 {
 
 		public ConstantsManager constantsManager;
+		public SelectionManager selectionManager;
 
 		private float offset = 5f;
 		private float offsetMultiplicator = 0;
+		private List<GameObject> iconList = new List<GameObject> ();
 
 
 		public void createMenu (List<Dictionary<string,object>> menuContents)
@@ -18,6 +20,7 @@ public class MenuCreator : MonoBehaviour
 						offsetMultiplicator = offsetMultiplicator + 1f;
 						constantsManager.addToItemCount ();
 				}
+				selectionManager.Icons = iconList;
 		}
 
 		private void createButton (Dictionary<string,object> menuButton)
@@ -37,7 +40,7 @@ public class MenuCreator : MonoBehaviour
 				
 				menuButton.TryGetValue ("icontexture", out tempObject);
 				plane.renderer.material.mainTexture = (Texture)tempObject;
-
+				iconList.Add (plane);
 		}
 }
 
