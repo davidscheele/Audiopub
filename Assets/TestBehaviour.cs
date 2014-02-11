@@ -24,4 +24,5 @@ public class TestBehaviour : MonoBehaviour
 				clickcount++;
 				debugText.text = clickcount + "times clicked!";
 		}
+
 }
