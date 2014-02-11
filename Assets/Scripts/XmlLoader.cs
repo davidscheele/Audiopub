@@ -10,6 +10,7 @@ public class XmlLoader : MonoBehaviour
 		public string MainMenuXmlName;
 //		private MenuCreator menuCreator = new MenuCreator ();
 		public MenuCreator menuCreator;
+		public ConstantsManager constantsManager;
 		
 		public GUIText debugtext1;
 		public GUIText debugtext2;
@@ -29,6 +30,7 @@ public class XmlLoader : MonoBehaviour
 	
 				ReadMainMenuXml ();
 				LoadResources ();
+				constantsManager.MenuContents = menuItemsListComplete;
 				menuCreator.createMenu (menuItemsListComplete);
 		}
 

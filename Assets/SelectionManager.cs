@@ -3,7 +3,8 @@ using System.Collections.Generic;
 
 public class SelectionManager : MonoBehaviour
 {
-
+		public ConstantsManager constantsManager;
+		public SoundManager soundManager;
 
 		int selectedItem = 0;
 		private List<GameObject> iconList;
@@ -36,6 +37,7 @@ public class SelectionManager : MonoBehaviour
 						deHighlight (iconList [selectedItem]);
 						selectedItem--;
 						highlight (iconList [selectedItem]);
+						soundManager.playMusic (constantsManager.getMusic (selectedItem));
 				}
 		}
 
@@ -45,6 +47,7 @@ public class SelectionManager : MonoBehaviour
 						deHighlight (iconList [selectedItem]);
 						selectedItem++;
 						highlight (iconList [selectedItem]);
+						soundManager.playMusic (constantsManager.getMusic (selectedItem));
 				}
 		}
 

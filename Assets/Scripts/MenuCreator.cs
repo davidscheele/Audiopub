@@ -5,8 +5,8 @@ using System.Collections.Generic;
 public class MenuCreator : MonoBehaviour
 {
 
-		public ConstantsManager constantsManager;
 		public SelectionManager selectionManager;
+		public ConstantsManager constantsManager;
 
 		private float offset = 5f;
 		private float offsetMultiplicator = 0;
@@ -21,6 +21,8 @@ public class MenuCreator : MonoBehaviour
 						constantsManager.addToItemCount ();
 				}
 				selectionManager.Icons = iconList;
+				
+				
 		}
 
 		private void createButton (Dictionary<string,object> menuButton)
