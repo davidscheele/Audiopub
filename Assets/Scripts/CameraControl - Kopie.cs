@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraControl : MonoBehaviour
+public class CameraControlCopy : MonoBehaviour
 {
 		public float iconSpacing; //Spacing Between Icons	
 		public float movementQuickness = 1; //Move camera how fast
 		public ConstantsManager constantsManager; //Test
-		public Camera mainCamera;
+
+		public GUIText debugtext;
 
 		private float start = 0f; //leftmost icon end
 		private float end = 0f; //rightmost icon end
@@ -71,7 +72,7 @@ public class CameraControl : MonoBehaviour
 
 		void SlideMotion ()
 		{
-				Vector3 tempVector = mainCamera.transform.position;
+				Vector3 tempVector = transform.position;
 				if (moveDirectionRight) {
 						if (tempVector.x + movementQuickness <= end)						//checks if we haven't yet reached the right end
 								tempVector.x = tempVector.x + movementQuickness;
@@ -80,8 +81,8 @@ public class CameraControl : MonoBehaviour
 								tempVector.x = tempVector.x - movementQuickness;
 				}
 
-				mainCamera.transform.position = tempVector;
-				if (mainCamera.transform.position.x % iconSpacing == 0) { //stop at spacing values
+				transform.position = tempVector;
+				if (transform.position.x % iconSpacing == 0) { //stop at spacing values
 						moving = false;
 				}
 

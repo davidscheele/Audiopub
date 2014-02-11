@@ -7,11 +7,9 @@ using System.IO;
 
 public class XmlLoader : MonoBehaviour
 {
-//		public TextAsset MainMenuXmlName;
 		public string MainMenuXmlName;
-		public GUIText debugText;
-		public Texture debugTexture;
-		private MenuCreator menuCreator = new MenuCreator ();
+//		private MenuCreator menuCreator = new MenuCreator ();
+		public MenuCreator menuCreator;
 		private List<Dictionary<string,string>> menuItemsList = new List<Dictionary<string,string>> ();
 		private Dictionary<string, string> menuItem;
 
@@ -32,8 +30,6 @@ public class XmlLoader : MonoBehaviour
 		void ReadMainMenuXml ()
 		{
 				XmlDocument mainMenuXml = new XmlDocument ();
-//				mainMenuXml.LoadXml (MainMenuXmlName.text);
-//				mainMenuXml.LoadXml (MainMenuXmlName);
 				mainMenuXml.Load (MainMenuXmlName);
 				XmlNodeList _menuItemsList = mainMenuXml.GetElementsByTagName ("menuitem");
 
