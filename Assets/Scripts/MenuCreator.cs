@@ -27,8 +27,6 @@ public class MenuCreator : MonoBehaviour
 
 		private void createButton (Dictionary<string,object> menuButton)
 		{
-				
-				string tempString = "Noname";
 				GameObject plane;
 				plane = GameObject.CreatePrimitive (PrimitiveType.Plane);
 
@@ -42,6 +40,8 @@ public class MenuCreator : MonoBehaviour
 				
 				menuButton.TryGetValue ("icontexture", out tempObject);
 				plane.renderer.material.mainTexture = (Texture)tempObject;
+				plane.layer = 1;
+				
 				iconList.Add (plane);
 		}
 }

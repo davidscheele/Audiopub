@@ -8,21 +8,15 @@ using System.IO;
 public class XmlLoader : MonoBehaviour
 {
 		public string MainMenuXmlName;
-//		private MenuCreator menuCreator = new MenuCreator ();
 		public MenuCreator menuCreator;
 		public ConstantsManager constantsManager;
-		
-		public GUIText debugtext1;
-		public GUIText debugtext2;
-		public GUIText debugtext3;
+
 
 		private List<Dictionary<string,string>> menuItemsList = new List<Dictionary<string,string>> ();
 		private List<Dictionary<string,object>> menuItemsListComplete = new List<Dictionary<string,object>> ();
 		private Dictionary<string, string> menuItem;
 
 
-
-		
 		
 		// Use this for initialization
 		void Start ()
@@ -67,17 +61,14 @@ public class XmlLoader : MonoBehaviour
 
 						menuItemStringDictionary.TryGetValue ("name", out tempString);
 						tempDictionary.Add ("iconname", tempString);
-						debugtext1.text = tempString;
 
 						menuItemStringDictionary.TryGetValue ("iconname", out tempString);
 						Texture iconTexture = Resources.Load<Texture> ("Icons/" + tempString);
 						tempDictionary.Add ("icontexture", iconTexture);
-						debugtext2.text = tempString;
 
 						menuItemStringDictionary.TryGetValue ("ambientsoundname", out tempString);
 						AudioClip iconAmbientAudio = Resources.Load<AudioClip> ("Sounds/" + tempString);
 						tempDictionary.Add ("iconambientaudio", iconAmbientAudio);
-						debugtext3.text = tempString;
 
 						menuItemsListComplete.Add (tempDictionary);
 				}

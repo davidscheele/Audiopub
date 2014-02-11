@@ -3,14 +3,15 @@ using System.Collections;
 
 public class CameraControl : MonoBehaviour
 {
-		public float iconSpacing; //Spacing Between Icons	
-		public float movementQuickness = 1; //Move camera how fast
+
 		public ConstantsManager constantsManager; //Test
 		public Camera mainCamera;
 		public SelectionManager selectionManager;
 
 		private float start = 0f; //leftmost icon end
 		private float end = 0f; //rightmost icon end
+		private float iconSpacing = 5; //Spacing Between Icons	
+		private float movementQuickness = 1; //Move camera how fast
 
 	
 		private bool moving = false;
