@@ -48,14 +48,13 @@
   <ItemGroup>
      <Compile Include="Assets\Interfaces\MenuCreatorInterface.cs" />
      <Compile Include="Assets\Scripts\BeginningTestscript.cs" />
-     <Compile Include="Assets\Scripts\ButtonCreator.cs" />
-     <Compile Include="Assets\Scripts\CameraControl - Kopie.cs" />
-     <Compile Include="Assets\Scripts\CameraControl.cs" />
-     <Compile Include="Assets\Scripts\ConstantsManager.cs" />
-     <Compile Include="Assets\Scripts\MenuCreator.cs" />
-     <Compile Include="Assets\Scripts\SoundManager.cs" />
-     <Compile Include="Assets\Scripts\XmlLoader.cs" />
-     <Compile Include="Assets\SelectionManager.cs" />
+     <Compile Include="Assets\Scripts\MenuCreationScripts\CameraControl.cs" />
+     <Compile Include="Assets\Scripts\MenuCreationScripts\ConstantsManager.cs" />
+     <Compile Include="Assets\Scripts\MenuCreationScripts\MenuCreator.cs" />
+     <Compile Include="Assets\Scripts\MenuCreationScripts\MenuPartConnector.cs" />
+     <Compile Include="Assets\Scripts\MenuCreationScripts\SelectionManager.cs" />
+     <Compile Include="Assets\Scripts\MenuCreationScripts\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\MenuCreationScripts\XmlLoader.cs" />
      <Compile Include="Assets\TestBehaviour.cs" />
      <None Include="Assets\Xml Files\MainMenuContentXml.xml" />
      <None Include="Assets\Xml Files\SettingsMenuContentXml.xml" />

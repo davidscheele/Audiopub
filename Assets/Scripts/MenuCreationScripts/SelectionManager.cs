@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 public class SelectionManager : MonoBehaviour
 {
-		public ConstantsManager constantsManager;
-		public SoundManager soundManager;
-		public AudioClip soundEffect;
+		public MenuPartConnector menuPartConnector;
+
 
 		int selectedItem = 0;
 		private List<GameObject> iconList;
@@ -13,14 +12,14 @@ public class SelectionManager : MonoBehaviour
 				get{ return iconList;}
 				set {
 						iconList = value;
-						highlight (iconList [selectedItem]);
+						select (selectedItem);
 				}
 		}
 
 		void Update ()
 		{
 				if (Input.GetKeyDown (KeyCode.Return)) {
-						soundManager.playAudioEffect (soundEffect);
+						menuPartConnector.soundManager.playAudioEffect (menuPartConnector.constantsManager.debugSoundEffect);
 						Application.LoadLevel ("CubeScene");
 		
 				}
@@ -30,6 +29,7 @@ public class SelectionManager : MonoBehaviour
 		{
 				selectedItem = selection;
 				highlight (iconList [selectedItem]);
+				menuPartConnector.soundManager.playMusic (menuPartConnector.constantsManager.getMusic (selectedItem));
 		}
 
 		private void highlight (GameObject plane)
@@ -47,7 +47,7 @@ public class SelectionManager : MonoBehaviour
 						deHighlight (iconList [selectedItem]);
 						selectedItem--;
 						highlight (iconList [selectedItem]);
-						soundManager.playMusic (constantsManager.getMusic (selectedItem));
+						menuPartConnector.soundManager.playMusic (menuPartConnector.constantsManager.getMusic (selectedItem));
 				}
 		}
 
@@ -57,7 +57,7 @@ public class SelectionManager : MonoBehaviour
 						deHighlight (iconList [selectedItem]);
 						selectedItem++;
 						highlight (iconList [selectedItem]);
-						soundManager.playMusic (constantsManager.getMusic (selectedItem));
+						menuPartConnector.soundManager.playMusic (menuPartConnector.constantsManager.getMusic (selectedItem));
 				}
 		}
 

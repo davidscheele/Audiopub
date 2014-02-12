@@ -2,23 +2,23 @@
 <menuitems>
 	<menuitem>
 	<name>Voice Volume</name>
-	<iconname>bestgameicon</iconname>
-	<ambientsoundname>bestgameambient</ambientsoundname>
-	<selectsoundname>bestgameselect</selectsoundname>
+	<iconname>voicevolumeicon</iconname>
+	<ambientsoundname>voicevolumeambient</ambientsoundname>
+	<selectsoundname>voicevolumeselect</selectsoundname>
 	</menuitem>
 	
 	<menuitem>
-	<name>The Second Best Game!</name>
-	<iconname>secondbestgameicon</iconname>
-	<ambientsoundname>secondbestgameambient</ambientsoundname>
-	<selectsoundname>secondbestgameselect</selectsoundname>
+	<name>Music Volume</name>
+	<iconname>musicvolumeicon</iconname>
+	<ambientsoundname>musicvolumeambient</ambientsoundname>
+	<selectsoundname>musicvolumeselect</selectsoundname>
 	</menuitem>
 
 	<menuitem>
-	<name>Last Game!</name>
-	<iconname>lastgameicon</iconname>
-	<ambientsoundname>last.game.ambient</ambientsoundname>
-	<selectsoundname>lastgameselect</selectsoundname>
+	<name>Effect Volume</name>
+	<iconname>effectvolumeicon</iconname>
+	<ambientsoundname>effectvolumeambient</ambientsoundname>
+	<selectsoundname>effectvolumeselect</selectsoundname>
 	</menuitem>
 
 </menuitems>

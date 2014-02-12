@@ -3,10 +3,8 @@ using System.Collections;
 
 public class CameraControl : MonoBehaviour
 {
+		public MenuPartConnector menuPartConnector;
 
-		public ConstantsManager constantsManager; //Test
-		public Camera mainCamera;
-		public SelectionManager selectionManager;
 
 		private float start = 0f; //leftmost icon end
 		private float end = 0f; //rightmost icon end
@@ -16,17 +14,11 @@ public class CameraControl : MonoBehaviour
 	
 		private bool moving = false;
 		private bool moveDirectionRight = true; //true if we move right, false if we move left
-
-		// Use this for initialization
-		void Start ()
-		{
-
-		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
-				end = (constantsManager.ItemCount - 1f) * iconSpacing;
+				end = (menuPartConnector.constantsManager.ItemCount - 1f) * iconSpacing;
 
 				if (moving) {
 
@@ -74,7 +66,7 @@ public class CameraControl : MonoBehaviour
 
 		void SlideMotion ()
 		{
-				Vector3 tempVector = mainCamera.transform.position;
+				Vector3 tempVector = menuPartConnector.constantsManager.mainCamera.transform.position;
 				if (moveDirectionRight) {
 						if (tempVector.x + movementQuickness <= end)						//checks if we haven't yet reached the right end
 								tempVector.x = tempVector.x + movementQuickness;
@@ -83,18 +75,19 @@ public class CameraControl : MonoBehaviour
 								tempVector.x = tempVector.x - movementQuickness;
 				}
 
-				mainCamera.transform.position = tempVector;
-				if (mainCamera.transform.position.x % iconSpacing == 0) { //stop at spacing values
+				menuPartConnector.constantsManager.mainCamera.transform.position = tempVector;
+				if (menuPartConnector.constantsManager.mainCamera.transform.position.x % iconSpacing == 0) { //stop at spacing values
 						moving = false;
 						if (moveDirectionRight) {
-								selectionManager.moveRight ();
+								menuPartConnector.selectionManager.moveRight ();
 						} else {
-								selectionManager.moveLeft ();
+								menuPartConnector.selectionManager.moveLeft ();
 						}
 						
 				}
 
 		}
+
 
 
 }

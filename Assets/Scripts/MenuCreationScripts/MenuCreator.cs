@@ -5,8 +5,7 @@ using System.Collections.Generic;
 public class MenuCreator : MonoBehaviour
 {
 
-		public SelectionManager selectionManager;
-		public ConstantsManager constantsManager;
+		public MenuPartConnector menuPartConnector;
 
 		private float offset = 5f;
 		private float offsetMultiplicator = 0;
@@ -18,9 +17,9 @@ public class MenuCreator : MonoBehaviour
 				foreach (Dictionary<string,object> menuItem in menuContents) {
 						createButton (menuItem);
 						offsetMultiplicator = offsetMultiplicator + 1f;
-						constantsManager.addToItemCount ();
+						menuPartConnector.constantsManager.addToItemCount ();
 				}
-				selectionManager.Icons = iconList;
+				menuPartConnector.selectionManager.Icons = iconList;
 				
 				
 		}

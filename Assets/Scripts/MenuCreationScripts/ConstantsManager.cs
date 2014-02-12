@@ -4,6 +4,14 @@ using System.Collections.Generic;
 public class ConstantsManager : MonoBehaviour
 {
 
+
+		public Camera mainCamera;
+		public AudioClip debugSoundEffect;
+		public AudioSource musicSource;
+		public AudioSource soundEffectSource;	
+		public string XmlName;
+		public string FileFolderName;
+
 		private List<Dictionary<string,object>> menuContents;
 
 		public List<Dictionary<string,object>> MenuContents {

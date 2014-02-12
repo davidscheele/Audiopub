@@ -7,10 +7,8 @@ using System.IO;
 
 public class XmlLoader : MonoBehaviour
 {
-		public string MainMenuXmlName;
-		public string FileFolderName;
-		public MenuCreator menuCreator;
-		public ConstantsManager constantsManager;
+
+		public MenuPartConnector menuPartConnector;
 
 
 		private List<Dictionary<string,string>> menuItemsList = new List<Dictionary<string,string>> ();
@@ -25,15 +23,15 @@ public class XmlLoader : MonoBehaviour
 	
 				ReadMainMenuXml ();
 				LoadResources ();
-				constantsManager.MenuContents = menuItemsListComplete;
-				menuCreator.createMenu (menuItemsListComplete);
+				menuPartConnector.constantsManager.MenuContents = menuItemsListComplete;
+				menuPartConnector.menuCreator.createMenu (menuItemsListComplete);
 		}
 
 		void ReadMainMenuXml ()
 		{
-				XmlDocument mainMenuXml = new XmlDocument ();
-				mainMenuXml.Load (MainMenuXmlName);
-				XmlNodeList _menuItemsList = mainMenuXml.GetElementsByTagName ("menuitem");
+				XmlDocument menuXml = new XmlDocument ();
+				menuXml.Load ("Assets/Xml Files/" + menuPartConnector.constantsManager.XmlName + ".xml");
+				XmlNodeList _menuItemsList = menuXml.GetElementsByTagName ("menuitem");
 
 				foreach (XmlNode _menuItem in _menuItemsList) {
 						XmlNodeList _menuItemData = _menuItem.ChildNodes;
@@ -64,11 +62,11 @@ public class XmlLoader : MonoBehaviour
 						tempDictionary.Add ("iconname", tempString);
 
 						menuItemStringDictionary.TryGetValue ("iconname", out tempString);
-						Texture iconTexture = Resources.Load<Texture> ("Icons/" + FileFolderName + "/" + tempString);
+						Texture iconTexture = Resources.Load<Texture> ("Icons/" + menuPartConnector.constantsManager.FileFolderName + "/" + tempString);
 						tempDictionary.Add ("icontexture", iconTexture);
 
 						menuItemStringDictionary.TryGetValue ("ambientsoundname", out tempString);
-						AudioClip iconAmbientAudio = Resources.Load<AudioClip> ("Sounds/" + FileFolderName + "/" + tempString);
+						AudioClip iconAmbientAudio = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + tempString);
 						tempDictionary.Add ("iconambientaudio", iconAmbientAudio);
 
 						menuItemsListComplete.Add (tempDictionary);
