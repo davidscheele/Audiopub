@@ -29,7 +29,7 @@ public class SelectionManager : MonoBehaviour
 		{
 				selectedItem = selection;
 				highlight (iconList [selectedItem]);
-				menuPartConnector.soundManager.playMusic (menuPartConnector.constantsManager.getMusic (selectedItem));
+				menuPartConnector.soundManager.playMusic (menuPartConnector.constantsManager.getIconAmbientMusic (selectedItem));
 		}
 
 		private void highlight (GameObject plane)
@@ -47,7 +47,8 @@ public class SelectionManager : MonoBehaviour
 						deHighlight (iconList [selectedItem]);
 						selectedItem--;
 						highlight (iconList [selectedItem]);
-						menuPartConnector.soundManager.playMusic (menuPartConnector.constantsManager.getMusic (selectedItem));
+						menuPartConnector.soundManager.playMusic (menuPartConnector.constantsManager.getIconAmbientMusic (selectedItem));
+						menuPartConnector.soundManager.playAudioEffect (menuPartConnector.constantsManager.getSwipeLeftSound ());
 				}
 		}
 
@@ -57,7 +58,8 @@ public class SelectionManager : MonoBehaviour
 						deHighlight (iconList [selectedItem]);
 						selectedItem++;
 						highlight (iconList [selectedItem]);
-						menuPartConnector.soundManager.playMusic (menuPartConnector.constantsManager.getMusic (selectedItem));
+						menuPartConnector.soundManager.playMusic (menuPartConnector.constantsManager.getIconAmbientMusic (selectedItem));
+						menuPartConnector.soundManager.playAudioEffect (menuPartConnector.constantsManager.getSwipeRightSound ());
 				}
 		}
 

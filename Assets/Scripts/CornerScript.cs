@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TestBehaviour : MonoBehaviour
+public class CornerScript : MonoBehaviour
 {
 	
-		public AudioClip effect;
-		public AudioSource effectplayer;
+		public MenuPartConnector menuPartConnector;
 		private int counter = 0;
 		private bool cornerHeld = false;
 
@@ -19,8 +18,7 @@ public class TestBehaviour : MonoBehaviour
 				if (counter > 50) {
 						cornerHeld = false;
 						counter = 0;
-						effectplayer.clip = effect;
-						effectplayer.Play ();
+						menuPartConnector.soundManager.playAudioEffect (menuPartConnector.constantsManager.getGUIButtonSelectSound ());
 				}
 
 		}

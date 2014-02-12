@@ -1,6 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MenuCreationScripts\SelectionManager.cs">
+    <Files>
+      <File FileName="Assets\Scripts\MenuCreationScripts\ConstantsManager.cs" Line="17" Column="50" />
+      <File FileName="Assets\Scripts\MenuCreationScripts\CameraControl.cs" Line="78" Column="40" />
+      <File FileName="Assets\Scripts\MenuCreationScripts\SelectionManager.cs" Line="51" Column="112" />
+      <File FileName="Assets\Scripts\MenuCreationScripts\SoundManager.cs" Line="7" Column="46" />
+      <File FileName="Assets\Scripts\MenuCreationScripts\XmlLoader.cs" Line="30" Column="77" />
+      <File FileName="Assets\Xml Files\MainMenuContentXml.xml" Line="33" Column="23" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

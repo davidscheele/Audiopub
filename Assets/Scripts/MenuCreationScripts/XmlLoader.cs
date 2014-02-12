@@ -12,9 +12,11 @@ public class XmlLoader : MonoBehaviour
 
 
 		private List<Dictionary<string,string>> menuItemsList = new List<Dictionary<string,string>> ();
-		private List<Dictionary<string,object>> menuItemsListComplete = new List<Dictionary<string,object>> ();
+		private List<Dictionary<string,object>> menuItemsListLoaded = new List<Dictionary<string,object>> ();
 		private Dictionary<string, string> menuItem;
 
+		private Dictionary<string, string> generalMenuSounds;
+		private Dictionary<string, object> generalMenuSoundsLoaded;
 
 		
 		// Use this for initialization
@@ -23,8 +25,9 @@ public class XmlLoader : MonoBehaviour
 	
 				ReadMainMenuXml ();
 				LoadResources ();
-				menuPartConnector.constantsManager.MenuContents = menuItemsListComplete;
-				menuPartConnector.menuCreator.createMenu (menuItemsListComplete);
+				menuPartConnector.constantsManager.MenuContents = menuItemsListLoaded;
+				menuPartConnector.menuCreator.createMenu (menuItemsListLoaded);
+				menuPartConnector.constantsManager.MenuSounds = generalMenuSoundsLoaded;
 		}
 
 		void ReadMainMenuXml ()
@@ -46,7 +49,17 @@ public class XmlLoader : MonoBehaviour
 						menuItemsList.Add (menuItem);
 
 				}
-
+				_menuItemsList = menuXml.GetElementsByTagName ("generalmenuvariables");
+				foreach (XmlNode _generalMenuVariables in _menuItemsList) {
+						XmlNodeList _generalMenuVariablesData = _generalMenuVariables.ChildNodes;
+						generalMenuSounds = new Dictionary<string, string> ();
+			
+						foreach (XmlNode _generalMenuVariablesField in _generalMenuVariablesData) {
+				
+								generalMenuSounds.Add (_generalMenuVariablesField.Name, _generalMenuVariablesField.InnerText);
+				
+						}			
+				}
 		}
 
 		void LoadResources ()
@@ -69,8 +82,30 @@ public class XmlLoader : MonoBehaviour
 						AudioClip iconAmbientAudio = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + tempString);
 						tempDictionary.Add ("iconambientaudio", iconAmbientAudio);
 
-						menuItemsListComplete.Add (tempDictionary);
+						menuItemsListLoaded.Add (tempDictionary);
 				}
+				Dictionary<string,object> _tempDictionary = new Dictionary<string, object> ();
+		
+				string _tempString = "";
+				
+				generalMenuSounds.TryGetValue ("swipeleftsound", out _tempString);
+				AudioClip _tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + _tempString);
+				_tempDictionary.Add ("swipeleftsound", _tempSound);
+
+				generalMenuSounds.TryGetValue ("swiperightsound", out _tempString);
+				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + _tempString);
+				_tempDictionary.Add ("swiperightsound", _tempSound);
+
+				generalMenuSounds.TryGetValue ("guibuttonselectsound", out _tempString);
+				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + _tempString);
+				_tempDictionary.Add ("guibuttonselectsound", _tempSound);
+
+				generalMenuSounds.TryGetValue ("ambientmusic", out _tempString);
+				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + _tempString);
+				_tempDictionary.Add ("ambientmusic", _tempSound);
+		
+				generalMenuSoundsLoaded = _tempDictionary;
+				
 		}
 
 }

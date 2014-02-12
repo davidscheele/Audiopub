@@ -22,10 +22,17 @@
 	<name>Last Game!</name>
 	<iconname>lastgameicon</iconname>
 	<ambientsoundname>last.game.ambient</ambientsoundname>
-	<selectsoundname>lastgameselect</selectsoundname>
-	<voiceovername>lastgamevoiceover</voiceovername>
+	<selectsoundname>lastgame.select</selectsoundname>
+	<voiceovername>lastgame.voiceover</voiceovername>
 	<subxml>lastgame.xml</subxml>
 	</menuitem>
+	
+	<generalmenuvariables>
+	<swipeleftsound>swipeleft</swipeleftsound>
+	<swiperightsound>swiperight</swiperightsound>
+	<guibuttonselectsound>guibuttonselect</guibuttonselectsound>
+	<ambientmusic>nothingyet</ambientmusic>
+	</generalmenuvariables>
 
 </menuitems>
 <!--
