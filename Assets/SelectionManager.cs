@@ -5,6 +5,7 @@ public class SelectionManager : MonoBehaviour
 {
 		public ConstantsManager constantsManager;
 		public SoundManager soundManager;
+		public AudioClip soundEffect;
 
 		int selectedItem = 0;
 		private List<GameObject> iconList;
@@ -13,6 +14,15 @@ public class SelectionManager : MonoBehaviour
 				set {
 						iconList = value;
 						highlight (iconList [selectedItem]);
+				}
+		}
+
+		void Update ()
+		{
+				if (Input.GetKeyDown (KeyCode.Return)) {
+						soundManager.playAudioEffect (soundEffect);
+						Application.LoadLevel ("CubeScene");
+		
 				}
 		}
 		

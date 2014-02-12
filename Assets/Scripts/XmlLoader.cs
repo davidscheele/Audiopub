@@ -8,6 +8,7 @@ using System.IO;
 public class XmlLoader : MonoBehaviour
 {
 		public string MainMenuXmlName;
+		public string FileFolderName;
 		public MenuCreator menuCreator;
 		public ConstantsManager constantsManager;
 
@@ -63,11 +64,11 @@ public class XmlLoader : MonoBehaviour
 						tempDictionary.Add ("iconname", tempString);
 
 						menuItemStringDictionary.TryGetValue ("iconname", out tempString);
-						Texture iconTexture = Resources.Load<Texture> ("Icons/" + tempString);
+						Texture iconTexture = Resources.Load<Texture> ("Icons/" + FileFolderName + "/" + tempString);
 						tempDictionary.Add ("icontexture", iconTexture);
 
 						menuItemStringDictionary.TryGetValue ("ambientsoundname", out tempString);
-						AudioClip iconAmbientAudio = Resources.Load<AudioClip> ("Sounds/" + tempString);
+						AudioClip iconAmbientAudio = Resources.Load<AudioClip> ("Sounds/" + FileFolderName + "/" + tempString);
 						tempDictionary.Add ("iconambientaudio", iconAmbientAudio);
 
 						menuItemsListComplete.Add (tempDictionary);

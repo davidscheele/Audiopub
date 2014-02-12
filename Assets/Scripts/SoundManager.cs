@@ -4,13 +4,23 @@ using System.Collections;
 public class SoundManager : MonoBehaviour
 {
 
-		public AudioSource musicTest;
+		public AudioSource musicSource;
+		public AudioSource soundEffectSource;	
 		
+
 		public void playMusic (AudioClip audioClip)
 		{
-				musicTest.Stop ();
-				musicTest.clip = audioClip;
-				musicTest.Play ();
+				musicSource.Stop ();
+				musicSource.clip = audioClip;
+				musicSource.Play ();
 		}
+
+		public void playAudioEffect (AudioClip audioClip)
+		{
+				soundEffectSource.clip = audioClip;
+				soundEffectSource.Play ();
+		}
+
+		
 
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menuitems>
+	<menuitem>
+	<name>Voice Volume</name>
+	<iconname>bestgameicon</iconname>
+	<ambientsoundname>bestgameambient</ambientsoundname>
+	<selectsoundname>bestgameselect</selectsoundname>
+	</menuitem>
+	
+	<menuitem>
+	<name>The Second Best Game!</name>
+	<iconname>secondbestgameicon</iconname>
+	<ambientsoundname>secondbestgameambient</ambientsoundname>
+	<selectsoundname>secondbestgameselect</selectsoundname>
+	</menuitem>
+
+	<menuitem>
+	<name>Last Game!</name>
+	<iconname>lastgameicon</iconname>
+	<ambientsoundname>last.game.ambient</ambientsoundname>
+	<selectsoundname>lastgameselect</selectsoundname>
+	</menuitem>
+
+</menuitems>
+<!--
+
+	
+
+
+	<menuitem>
+	<name></name>
+	<iconname></iconname>
+	<ambientsoundname></ambientsoundname>
+	<selectsoundname></selectsoundname>
+	<voiceovername></voiceovername>
+	<subxml></subxml>
+	</menuitem>
+	
+	-->
+	
