@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CornerScript : MonoBehaviour
+public class ReturnCornerMainMenuScript : MonoBehaviour
 {
 	
 		public AudioSource soundEffectSource;
@@ -21,7 +21,6 @@ public class CornerScript : MonoBehaviour
 						counter = 0;
 						soundEffectSource.clip = returnButtonSound;
 						soundEffectSource.Play ();
-						Application.LoadLevel ("MainHub");
 				}
 
 		}

@@ -20,7 +20,7 @@ public class SelectionManager : MonoBehaviour
 		{
 				if (Input.GetKeyDown (KeyCode.Return)) {
 						menuPartConnector.soundManager.playSoundEffect (menuPartConnector.constantsManager.getIconSelectSound ());
-						
+						Application.LoadLevel (menuPartConnector.constantsManager.getSelectedScene ());
 				}
 		}
 		

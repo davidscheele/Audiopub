@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
@@ -75,20 +75,23 @@ public class XmlLoader : MonoBehaviour
 						tempDictionary.Add ("iconname", tempString);
 
 						menuItemStringDictionary.TryGetValue ("iconname", out tempString);
-						Texture iconTexture = Resources.Load<Texture> ("Icons/" + menuPartConnector.constantsManager.FileFolderName + "/" + tempString);
+						Texture iconTexture = Resources.Load<Texture> ("Icons/" + menuPartConnector.constantsManager.SpecificMenuSoundsFolder + "/" + tempString);
 						tempDictionary.Add ("icontexture", iconTexture);
 
 						menuItemStringDictionary.TryGetValue ("ambientsoundname", out tempString);
-						AudioClip iconAmbientAudio = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + tempString);
+						AudioClip iconAmbientAudio = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.SpecificMenuSoundsFolder + "/" + tempString);
 						tempDictionary.Add ("iconambientaudio", iconAmbientAudio);
 
 						menuItemStringDictionary.TryGetValue ("selectsoundname", out tempString);
-						AudioClip iconSelectSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + tempString);
+						AudioClip iconSelectSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.SpecificMenuSoundsFolder + "/" + tempString);
 						tempDictionary.Add ("iconselectsound", iconSelectSound);
 
 						menuItemStringDictionary.TryGetValue ("voiceovername", out tempString);
-						AudioClip iconVoiceOverSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + tempString);
+						AudioClip iconVoiceOverSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.SpecificMenuSoundsFolder + "/" + tempString);
 						tempDictionary.Add ("iconvoiceover", iconVoiceOverSound);
+
+						menuItemStringDictionary.TryGetValue ("scenename", out tempString);
+						tempDictionary.Add ("iconscene", tempString);
 
 						menuItemsListLoaded.Add (tempDictionary);
 				}
@@ -97,27 +100,27 @@ public class XmlLoader : MonoBehaviour
 				string _tempString = "";
 				
 				generalMenuSounds.TryGetValue ("swipeleftsound", out _tempString);
-				AudioClip _tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + _tempString);
+				AudioClip _tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.GeneralMenuSoundsFolder + "/" + _tempString);
 				_tempDictionary.Add ("swipeleftsound", _tempSound);
 
 				generalMenuSounds.TryGetValue ("swiperightsound", out _tempString);
-				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + _tempString);
+				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.GeneralMenuSoundsFolder + "/" + _tempString);
 				_tempDictionary.Add ("swiperightsound", _tempSound);
 
 				generalMenuSounds.TryGetValue ("leftbordersound", out _tempString);
-				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + _tempString);
+				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.GeneralMenuSoundsFolder + "/" + _tempString);
 				_tempDictionary.Add ("leftbordersound", _tempSound);
 		
 				generalMenuSounds.TryGetValue ("rightbordersound", out _tempString);
-				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + _tempString);
+				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.GeneralMenuSoundsFolder + "/" + _tempString);
 				_tempDictionary.Add ("rightbordersound", _tempSound);
 
 				generalMenuSounds.TryGetValue ("guibuttonselectsound", out _tempString);
-				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + _tempString);
+				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.GeneralMenuSoundsFolder + "/" + _tempString);
 				_tempDictionary.Add ("guibuttonselectsound", _tempSound);
 
 				generalMenuSounds.TryGetValue ("ambientmusic", out _tempString);
-				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + _tempString);
+				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.GeneralMenuSoundsFolder + "/" + _tempString);
 				_tempDictionary.Add ("ambientmusic", _tempSound);
 		
 				generalMenuSoundsLoaded = _tempDictionary;

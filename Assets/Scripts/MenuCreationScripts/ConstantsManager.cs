@@ -6,12 +6,12 @@ public class ConstantsManager : MonoBehaviour
 
 		public MenuPartConnector menuPartConnector;
 		public Camera mainCamera;
-		public AudioClip debugSoundEffect;
 		public AudioSource musicSource;
 		public AudioSource soundEffectSource;	
 		public AudioSource voiceOverSource;
 		public string XmlName;
-		public string FileFolderName;
+		public string SpecificMenuSoundsFolder;
+		public string GeneralMenuSoundsFolder;
 
 		private List<Dictionary<string,object>> menuContents;
 
@@ -86,6 +86,13 @@ public class ConstantsManager : MonoBehaviour
 				object audioClip;
 				menuContents [menuPartConnector.selectionManager.getSelectedItemIndex ()].TryGetValue ("iconvoiceover", out audioClip);
 				return (AudioClip)audioClip;
+		}
+
+		public string getSelectedScene ()
+		{
+				object sceneName;
+				menuContents [menuPartConnector.selectionManager.getSelectedItemIndex ()].TryGetValue ("iconscene", out sceneName);
+				return (string)sceneName;
 		}
 		private float itemCount = 0;
 

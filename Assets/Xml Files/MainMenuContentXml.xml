@@ -6,7 +6,7 @@
 	<ambientsoundname>bestgameambient</ambientsoundname>
 	<selectsoundname>bestgameselect</selectsoundname>
 	<voiceovername>bestgamevoiceover</voiceovername>
-	<subxml>bestgame.xml</subxml>
+	<scenename>CubeScene</scenename>
 	</menuitem>
 	
 	<menuitem>
@@ -15,7 +15,7 @@
 	<ambientsoundname>secondbestgameambient</ambientsoundname>
 	<selectsoundname>secondbestgameselect</selectsoundname>
 	<voiceovername>secondbestgamevoiceover</voiceovername>
-	<subxml>secondbestgame.xml</subxml>
+	<scenename>secondbestgame</scenename>
 	</menuitem>
 
 	<menuitem>
@@ -24,7 +24,7 @@
 	<ambientsoundname>last.game.ambient</ambientsoundname>
 	<selectsoundname>lastgame.select</selectsoundname>
 	<voiceovername>lastgame.voiceover</voiceovername>
-	<subxml>lastgame.xml</subxml>
+	<scenename>lastgame</scenename>
 	</menuitem>
 	
 	<generalmenuvariables>
