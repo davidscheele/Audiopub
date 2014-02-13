@@ -28,6 +28,18 @@
 	</menuitem>
 	
 	<generalmenuvariables>
+	<swipeleftsound>Swipe_1_L</swipeleftsound>
+	<swiperightsound>Swipe_1_R</swiperightsound>
+	<leftbordersound>End_list_1</leftbordersound>
+	<rightbordersound>End_list_2</rightbordersound>
+	<guibuttonselectsound>Info</guibuttonselectsound>
+	<ambientmusic>Ambient_1_Pub</ambientmusic>
+	</generalmenuvariables>
+
+</menuitems>
+<!--
+
+		<generalmenuvariables>
 	<swipeleftsound>swipeleft</swipeleftsound>
 	<swiperightsound>swiperight</swiperightsound>
 	<leftbordersound>leftborder</leftbordersound>
@@ -35,11 +47,6 @@
 	<guibuttonselectsound>guibuttonselect</guibuttonselectsound>
 	<ambientmusic>nothingyet</ambientmusic>
 	</generalmenuvariables>
-
-</menuitems>
-<!--
-
-	
 
 
 	<menuitem>

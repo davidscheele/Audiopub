@@ -1,15 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CornerScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Xml Files\MainMenuContentXml.xml">
     <Files>
-      <File FileName="Assets\Scripts\VoiceOverCornerScript.cs" Line="22" Column="109" />
+      <File FileName="Assets\Scripts\VoiceOverCornerScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\MenuCreationScripts\ConstantsManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\MenuCreationScripts\SelectionManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\MenuCreationScripts\SoundManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Xml Files\MainMenuContentXml.xml" Line="1" Column="1" />
+      <File FileName="Assets\Xml Files\MainMenuContentXml.xml" Line="36" Column="29" />
       <File FileName="Assets\Scripts\MenuCreationScripts\XmlLoader.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CornerScript.cs" Line="9" Column="27" />
-      <File FileName="Assets\Scripts\ReturnCornerMainMenuScript.cs" Line="23" Column="33" />
+      <File FileName="Assets\Scripts\CornerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ReturnCornerMainMenuScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
