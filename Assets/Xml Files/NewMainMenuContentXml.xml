@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menuitems>
+	<menuitem>
+	<name>Audio Archery</name>
+	<iconname>ArcheryGameIcon</iconname>
+	<voiceovername>ArcheryGameVoiceover</voiceovername>
+	</menuitem>
+	
+	<menuitem>
+	<name>Audio Memory</name>
+	<iconname>AudioMemoryIcon</iconname>
+	<voiceovername>AudioMemoryVoiceover</voiceovername>
+	</menuitem>
+
+	<menuitem>
+	<name>Audio Pong</name>
+	<iconname>AudioPongIcon</iconname>
+	<voiceovername>AudioPongVoiceover</voiceovername>
+	</menuitem>
+	
+	<menuitem>
+	<name>Audio Tetris</name>
+	<iconname>AudioTetrisIcon</iconname>
+	<voiceovername>AudioTetrisVoiceover</voiceovername>
+	</menuitem>
+	
+	<menuitem>
+	<name>Slot Machines</name>
+	<iconname>SlotMachinesIcon</iconname>
+	<voiceovername>SlotMachinesVoiceover</voiceovername>
+	</menuitem>
+	
+	<generalmenuvariables>
+	<swipeleftsound>Swipe_1_L</swipeleftsound>
+	<swiperightsound>Swipe_1_R</swiperightsound>
+	<leftbordersound>End_list_1</leftbordersound>
+	<rightbordersound>End_list_2</rightbordersound>
+	<guibuttonselectsound>Info</guibuttonselectsound>
+	<iconselectsound>Open_1</iconselectsound>
+	<ambientmusic>Ambient_1_Pub</ambientmusic>
+	</generalmenuvariables>
+
+</menuitems>
+<!--
+
+		<generalmenuvariables>
+	<swipeleftsound>swipeleft</swipeleftsound>
+	<swiperightsound>swiperight</swiperightsound>
+	<leftbordersound>leftborder</leftbordersound>
+	<rightbordersound>rightborder</rightbordersound>
+	<guibuttonselectsound>guibuttonselect</guibuttonselectsound>
+	<ambientmusic>nothingyet</ambientmusic>
+	</generalmenuvariables>
+
+
+	<menuitem>
+	<name></name>
+	<iconname></iconname>
+	<ambientsoundname></ambientsoundname>
+	<selectsoundname></selectsoundname>
+	<voiceovername></voiceovername>
+	<scenename></scenename>
+	</menuitem>
+	
+	-->
+	
