@@ -19,9 +19,8 @@ public class SelectionManager : MonoBehaviour
 		void Update ()
 		{
 				if (Input.GetKeyDown (KeyCode.Return)) {
-						menuPartConnector.soundManager.playAudioEffect (menuPartConnector.constantsManager.debugSoundEffect);
-						Application.LoadLevel ("CubeScene");
-		
+						menuPartConnector.soundManager.playSoundEffect (menuPartConnector.constantsManager.getIconSelectSound ());
+						
 				}
 		}
 		
@@ -29,7 +28,7 @@ public class SelectionManager : MonoBehaviour
 		{
 				selectedItem = selection;
 				highlight (iconList [selectedItem]);
-				menuPartConnector.soundManager.playMusic (menuPartConnector.constantsManager.getIconAmbientMusic (selectedItem));
+				menuPartConnector.soundManager.playMusic (menuPartConnector.constantsManager.getIconAmbientMusic ());
 		}
 
 		private void highlight (GameObject plane)
@@ -47,8 +46,8 @@ public class SelectionManager : MonoBehaviour
 						deHighlight (iconList [selectedItem]);
 						selectedItem--;
 						highlight (iconList [selectedItem]);
-						menuPartConnector.soundManager.playMusic (menuPartConnector.constantsManager.getIconAmbientMusic (selectedItem));
-						menuPartConnector.soundManager.playAudioEffect (menuPartConnector.constantsManager.getSwipeLeftSound ());
+						menuPartConnector.soundManager.playMusic (menuPartConnector.constantsManager.getIconAmbientMusic ());
+						menuPartConnector.soundManager.playSoundEffect (menuPartConnector.constantsManager.getSwipeLeftSound ());
 				}
 		}
 
@@ -58,9 +57,12 @@ public class SelectionManager : MonoBehaviour
 						deHighlight (iconList [selectedItem]);
 						selectedItem++;
 						highlight (iconList [selectedItem]);
-						menuPartConnector.soundManager.playMusic (menuPartConnector.constantsManager.getIconAmbientMusic (selectedItem));
-						menuPartConnector.soundManager.playAudioEffect (menuPartConnector.constantsManager.getSwipeRightSound ());
+						menuPartConnector.soundManager.playMusic (menuPartConnector.constantsManager.getIconAmbientMusic ());
+						menuPartConnector.soundManager.playSoundEffect (menuPartConnector.constantsManager.getSwipeRightSound ());
 				}
 		}
-
+		public int getSelectedItemIndex ()
+		{
+				return selectedItem;
+		}
 }

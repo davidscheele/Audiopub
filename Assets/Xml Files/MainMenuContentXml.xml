@@ -5,7 +5,7 @@
 	<iconname>bestgameicon</iconname>
 	<ambientsoundname>bestgameambient</ambientsoundname>
 	<selectsoundname>bestgameselect</selectsoundname>
-	<voiceovername>bestgamevoice</voiceovername>
+	<voiceovername>bestgamevoiceover</voiceovername>
 	<subxml>bestgame.xml</subxml>
 	</menuitem>
 	
@@ -30,6 +30,8 @@
 	<generalmenuvariables>
 	<swipeleftsound>swipeleft</swipeleftsound>
 	<swiperightsound>swiperight</swiperightsound>
+	<leftbordersound>leftborder</leftbordersound>
+	<rightbordersound>rightborder</rightbordersound>
 	<guibuttonselectsound>guibuttonselect</guibuttonselectsound>
 	<ambientmusic>nothingyet</ambientmusic>
 	</generalmenuvariables>

@@ -82,6 +82,14 @@ public class XmlLoader : MonoBehaviour
 						AudioClip iconAmbientAudio = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + tempString);
 						tempDictionary.Add ("iconambientaudio", iconAmbientAudio);
 
+						menuItemStringDictionary.TryGetValue ("selectsoundname", out tempString);
+						AudioClip iconSelectSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + tempString);
+						tempDictionary.Add ("iconselectsound", iconSelectSound);
+
+						menuItemStringDictionary.TryGetValue ("voiceovername", out tempString);
+						AudioClip iconVoiceOverSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + tempString);
+						tempDictionary.Add ("iconvoiceover", iconVoiceOverSound);
+
 						menuItemsListLoaded.Add (tempDictionary);
 				}
 				Dictionary<string,object> _tempDictionary = new Dictionary<string, object> ();
@@ -95,6 +103,14 @@ public class XmlLoader : MonoBehaviour
 				generalMenuSounds.TryGetValue ("swiperightsound", out _tempString);
 				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + _tempString);
 				_tempDictionary.Add ("swiperightsound", _tempSound);
+
+				generalMenuSounds.TryGetValue ("leftbordersound", out _tempString);
+				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + _tempString);
+				_tempDictionary.Add ("leftbordersound", _tempSound);
+		
+				generalMenuSounds.TryGetValue ("rightbordersound", out _tempString);
+				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + _tempString);
+				_tempDictionary.Add ("rightbordersound", _tempSound);
 
 				generalMenuSounds.TryGetValue ("guibuttonselectsound", out _tempString);
 				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.FileFolderName + "/" + _tempString);

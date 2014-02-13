@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\MenuCreationScripts\SelectionManager.cs" />
      <Compile Include="Assets\Scripts\MenuCreationScripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\MenuCreationScripts\XmlLoader.cs" />
+     <Compile Include="Assets\Scripts\VoiceOverCornerScript.cs" />
      <None Include="Assets\Xml Files\MainMenuContentXml.xml" />
      <None Include="Assets\Xml Files\SettingsMenuContentXml.xml" />
   </ItemGroup>

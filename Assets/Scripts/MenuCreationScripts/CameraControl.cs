@@ -68,13 +68,18 @@ public class CameraControl : MonoBehaviour
 		{
 				Vector3 tempVector = menuPartConnector.constantsManager.mainCamera.transform.position;
 				if (moveDirectionRight) {
-						if (tempVector.x + movementQuickness <= end)						//checks if we haven't yet reached the right end
+						if (tempVector.x + movementQuickness <= end) {						//checks if we haven't yet reached the right end
 								tempVector.x = tempVector.x + movementQuickness;
+						} else {
+								menuPartConnector.soundManager.playSoundEffect (menuPartConnector.constantsManager.getRightBorderSound ()); //Play Sound to signalize end of the menu
+						}
 				} else {
-						if (tempVector.x - movementQuickness >= start)					//checks if we haven't yet reached the left end
+						if (tempVector.x - movementQuickness >= start) {					//checks if we haven't yet reached the left end
 								tempVector.x = tempVector.x - movementQuickness;
+						} else {
+								menuPartConnector.soundManager.playSoundEffect (menuPartConnector.constantsManager.getLeftBorderSound ()); //Play Sound to signalize end of the menu
+						}
 				}
-
 				menuPartConnector.constantsManager.mainCamera.transform.position = tempVector;
 				if (menuPartConnector.constantsManager.mainCamera.transform.position.x % iconSpacing == 0) { //stop at spacing values
 						moving = false;
@@ -87,6 +92,7 @@ public class CameraControl : MonoBehaviour
 				}
 
 		}
+
 
 
 

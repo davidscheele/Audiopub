@@ -4,11 +4,12 @@ using System.Collections.Generic;
 public class ConstantsManager : MonoBehaviour
 {
 
-
+		public MenuPartConnector menuPartConnector;
 		public Camera mainCamera;
 		public AudioClip debugSoundEffect;
 		public AudioSource musicSource;
 		public AudioSource soundEffectSource;	
+		public AudioSource voiceOverSource;
 		public string XmlName;
 		public string FileFolderName;
 
@@ -45,6 +46,20 @@ public class ConstantsManager : MonoBehaviour
 				return (AudioClip)audioClip;
 		}
 
+		public AudioClip getRightBorderSound ()
+		{
+				object audioClip;
+				menuSounds.TryGetValue ("rightbordersound", out audioClip);
+				return (AudioClip)audioClip;
+		}
+
+		public AudioClip getLeftBorderSound ()
+		{
+				object audioClip;
+				menuSounds.TryGetValue ("leftbordersound", out audioClip);
+				return (AudioClip)audioClip;
+		}
+
 		public AudioClip getGUIButtonSelectSound ()
 		{
 				object audioClip;
@@ -52,10 +67,24 @@ public class ConstantsManager : MonoBehaviour
 				return (AudioClip)audioClip;
 		}
 
-		public AudioClip getIconAmbientMusic (int itemNumber)
+		public AudioClip getIconAmbientMusic ()
 		{
 				object audioClip;
-				menuContents [itemNumber].TryGetValue ("iconambientaudio", out audioClip);
+				menuContents [menuPartConnector.selectionManager.getSelectedItemIndex ()].TryGetValue ("iconambientaudio", out audioClip);
+				return (AudioClip)audioClip;
+		}
+
+		public AudioClip getIconSelectSound ()
+		{
+				object audioClip;
+				menuContents [menuPartConnector.selectionManager.getSelectedItemIndex ()].TryGetValue ("iconselectsound", out audioClip);
+				return (AudioClip)audioClip;
+		}
+
+		public AudioClip getIconVoiceOver ()
+		{
+				object audioClip;
+				menuContents [menuPartConnector.selectionManager.getSelectedItemIndex ()].TryGetValue ("iconvoiceover", out audioClip);
 				return (AudioClip)audioClip;
 		}
 		private float itemCount = 0;

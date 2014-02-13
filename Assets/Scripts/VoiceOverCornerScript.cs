@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CornerScript : MonoBehaviour
+public class VoiceOverCornerScript : MonoBehaviour
 {
 	
 		public MenuPartConnector menuPartConnector;
@@ -19,6 +19,7 @@ public class CornerScript : MonoBehaviour
 						cornerHeld = false;
 						counter = 0;
 						menuPartConnector.soundManager.playSoundEffect (menuPartConnector.constantsManager.getGUIButtonSelectSound ());
+						menuPartConnector.soundManager.playVoiceOver (menuPartConnector.constantsManager.getIconVoiceOver ());
 				}
 
 		}
