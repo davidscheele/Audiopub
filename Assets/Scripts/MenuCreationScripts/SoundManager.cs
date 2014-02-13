@@ -11,6 +11,11 @@ public class SoundManager : MonoBehaviour
 				menuPartConnector.constantsManager.musicSource.clip = audioClip;
 				menuPartConnector.constantsManager.musicSource.Play ();
 		}
+		public void playAmbientMusic (AudioClip audioClip)
+		{
+				menuPartConnector.constantsManager.ambientMusicSource.clip = audioClip;
+				menuPartConnector.constantsManager.ambientMusicSource.Play ();
+		}
 
 		public void playSoundEffect (AudioClip audioClip)
 		{

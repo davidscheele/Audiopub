@@ -4,9 +4,13 @@ using System.Collections.Generic;
 public class ConstantsManager : MonoBehaviour
 {
 
+		public GUIText debugtext; //debug
+		
+		
 		public MenuPartConnector menuPartConnector;
 		public Camera mainCamera;
 		public AudioSource musicSource;
+		public AudioSource ambientMusicSource;
 		public AudioSource soundEffectSource;	
 		public AudioSource voiceOverSource;
 		public string XmlName;
@@ -16,13 +20,16 @@ public class ConstantsManager : MonoBehaviour
 		private List<Dictionary<string,object>> menuContents;
 
 		public List<Dictionary<string,object>> MenuContents {
-				set{ menuContents = value;}
+				set {
+						menuContents = value;
+						setAudioSourcesCenter ();
+				}
 		}
 
 		private Dictionary<string,object> menuSounds;
 	
 		public Dictionary<string,object> MenuSounds {
-				set{ menuSounds = value;}
+				set { menuSounds = value;}
 		}
 
 		public AudioClip getAmbientMusic ()
@@ -66,6 +73,18 @@ public class ConstantsManager : MonoBehaviour
 				menuSounds.TryGetValue ("guibuttonselectsound", out audioClip);
 				return (AudioClip)audioClip;
 		}
+		public AudioClip getMenuSelectionSound ()
+		{
+				object audioClip;
+				menuSounds.TryGetValue ("iconselectsound", out audioClip);
+				return (AudioClip)audioClip;
+		}
+		public AudioClip getMenuAmbientMusic ()
+		{
+				object audioClip;
+				menuSounds.TryGetValue ("ambientmusic", out audioClip);
+				return (AudioClip)audioClip;
+		}
 
 		public AudioClip getIconAmbientMusic ()
 		{
@@ -103,6 +122,13 @@ public class ConstantsManager : MonoBehaviour
 		public void addToItemCount ()
 		{
 				itemCount = itemCount + 1f;
+		}
+
+		public void setAudioSourcesCenter ()
+		{
+				Vector3 _tempVector = soundEffectSource.transform.position;
+				_tempVector.x = (menuContents.Count / 2) * 5f;
+				soundEffectSource.transform.position = _tempVector;
 		}
 
 		

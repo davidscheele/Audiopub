@@ -33,6 +33,7 @@
 	<leftbordersound>End_list_1</leftbordersound>
 	<rightbordersound>End_list_2</rightbordersound>
 	<guibuttonselectsound>Info</guibuttonselectsound>
+	<iconselectsound>Open_1</iconselectsound>
 	<ambientmusic>Ambient_1_Pub</ambientmusic>
 	</generalmenuvariables>
 

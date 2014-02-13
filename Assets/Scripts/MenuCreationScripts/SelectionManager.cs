@@ -19,7 +19,8 @@ public class SelectionManager : MonoBehaviour
 		void Update ()
 		{
 				if (Input.GetKeyDown (KeyCode.Return)) {
-						menuPartConnector.soundManager.playSoundEffect (menuPartConnector.constantsManager.getIconSelectSound ());
+//						menuPartConnector.soundManager.playSoundEffect (menuPartConnector.constantsManager.getIconSelectSound ()); //Use if every Selection should have their own Selection Sound
+						menuPartConnector.soundManager.playSoundEffect (menuPartConnector.constantsManager.getMenuSelectionSound ()); //Use this if every Selection should sound the same
 						Application.LoadLevel (menuPartConnector.constantsManager.getSelectedScene ());
 				}
 		}

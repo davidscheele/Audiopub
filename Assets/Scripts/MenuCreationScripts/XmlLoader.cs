@@ -26,8 +26,9 @@ public class XmlLoader : MonoBehaviour
 				ReadMainMenuXml ();
 				LoadResources ();
 				menuPartConnector.constantsManager.MenuContents = menuItemsListLoaded;
-				menuPartConnector.menuCreator.createMenu (menuItemsListLoaded);
 				menuPartConnector.constantsManager.MenuSounds = generalMenuSoundsLoaded;
+				menuPartConnector.menuCreator.createMenu (menuItemsListLoaded);
+
 		}
 
 		void ReadMainMenuXml ()
@@ -118,6 +119,10 @@ public class XmlLoader : MonoBehaviour
 				generalMenuSounds.TryGetValue ("guibuttonselectsound", out _tempString);
 				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.GeneralMenuSoundsFolder + "/" + _tempString);
 				_tempDictionary.Add ("guibuttonselectsound", _tempSound);
+
+				generalMenuSounds.TryGetValue ("iconselectsound", out _tempString);
+				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.GeneralMenuSoundsFolder + "/" + _tempString);
+				_tempDictionary.Add ("iconselectsound", _tempSound);
 
 				generalMenuSounds.TryGetValue ("ambientmusic", out _tempString);
 				_tempSound = Resources.Load<AudioClip> ("Sounds/" + menuPartConnector.constantsManager.GeneralMenuSoundsFolder + "/" + _tempString);

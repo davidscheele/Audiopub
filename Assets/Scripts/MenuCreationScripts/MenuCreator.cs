@@ -15,16 +15,18 @@ public class MenuCreator : MonoBehaviour
 		public void createMenu (List<Dictionary<string,object>> menuContents)
 		{
 				foreach (Dictionary<string,object> menuItem in menuContents) {
-						createButton (menuItem);
+						createIcon (menuItem);
 						offsetMultiplicator = offsetMultiplicator + 1f;
 						menuPartConnector.constantsManager.addToItemCount ();
 				}
 				menuPartConnector.selectionManager.Icons = iconList;
+				menuPartConnector.soundManager.playAmbientMusic (menuPartConnector.constantsManager.getAmbientMusic ());
+				
 				
 				
 		}
 
-		private void createButton (Dictionary<string,object> menuButton)
+		private void createIcon (Dictionary<string,object> menuButton)
 		{
 				GameObject plane;
 				plane = GameObject.CreatePrimitive (PrimitiveType.Plane);
