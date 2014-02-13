@@ -1,13 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MenuCreationScripts\SelectionManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Xml Files\MainMenuContentXml.xml">
     <Files>
-      <File FileName="Assets\Scripts\MenuCreationScripts\ConstantsManager.cs" Line="76" Column="38" />
-      <File FileName="Assets\Scripts\MenuCreationScripts\CameraControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MenuCreationScripts\SelectionManager.cs" Line="23" Column="7" />
-      <File FileName="Assets\Scripts\MenuCreationScripts\SoundManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MenuCreationScripts\XmlLoader.cs" Line="91" Column="41" />
-      <File FileName="Assets\Xml Files\MainMenuContentXml.xml" Line="17" Column="16" />
+      <File FileName="Assets\Scripts\VoiceOverCornerScript.cs" Line="22" Column="109" />
+      <File FileName="Assets\Scripts\MenuCreationScripts\ConstantsManager.cs" Line="87" Column="77" />
+      <File FileName="Assets\Scripts\MenuCreationScripts\SelectionManager.cs" Line="69" Column="1" />
+      <File FileName="Assets\Scripts\MenuCreationScripts\SoundManager.cs" Line="24" Column="49" />
+      <File FileName="Assets\Xml Files\MainMenuContentXml.xml" Line="8" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
